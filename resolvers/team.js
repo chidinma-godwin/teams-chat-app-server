@@ -75,7 +75,7 @@ export default {
           };
         }
 
-        await models.Member.create(args);
+        await models.Member.create({ userId: userToAdd.id, teamId });
 
         return {
           ok: true
